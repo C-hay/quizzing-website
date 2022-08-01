@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="cards.css">
+	<title>Parakh'21</title>
+	<style type="text/css">
+		* {
+			margin: 0;
+			padding: 0;
+			font-family: verdana;
+		}
+		#menuToggle {
+			display: none;
+		}
+
+		header {
+			background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url(https://lh3.googleusercontent.com/pwlMyiu_H8FdOrY3y86UBpN54kW3tqSqlhc0K7bjIcZkvBE75RAnSJ-VNXndyXTSOOPJ8YbYr5TXECH1ed7WeL1EHoIrwDA6ZVh8ty8c8U3nWG5b8riSgPL2H4PGLnxie4weR4TKiQ=w2400);
+			height: 100vh;
+			background-size: cover;
+			background-position: center;
+		}
+		.one {
+			float: right;
+			list-style-type: none;
+			margin-top: 4%;
+			margin-right: 5%;
+		}
+		ul li {
+			display: inline-block;
+		}
+		ul li a {
+			text-decoration: none;
+			color: white;
+			font-size: 20px;
+			padding: 5px 20px;
+			border: 2px solid white;
+			transition: 0.6s ease;
+		}
+		ul li a:hover {
+			background-color: white;
+			color: black;
+		}
+		.logo {
+			position: absolute;
+			top: 6%;
+			left: 2%;
+		}
+		.logo img {
+			float: left;
+			width: 300px;
+			height: auto;
+			transition: transform .2s;
+		}
+		.logo img:hover {
+			transform: translateY(-10px);
+		}
+		.myheader {
+			width: 100%;
+		}
+		.title {
+			position: absolute;
+			top: 55%;
+			left: 50%;
+			transform: translate(-50%,-50%);
+		}
+		.title h1 {
+			color: white;
+			font-size: 50px;
+			text-align: center;
+			text-shadow: 4px 4px 6px black;
+		}
+		.title h1.author {
+			font-size: 20px; 
+			text-align: center;
+		}
+		.button {
+			position: absolute;
+			top: 92%;
+			left: 50%;
+			transform: translate(-50%,-50%);
+		}
+		.butt {
+			border: 2px solid white;
+			padding: 10px 30px;
+			color: white;
+			margin: 10px;
+			font-size: 25px;
+			
+			box-shadow: 0px 3px 0px #2b638f;
+			text-decoration: none;
+			transition: 0.6s ease;
+			border-radius: 50px;
+		}
+		.butt:hover {
+			background-color: white;
+			color: black;
+		}
+
+		.three {
+			float: left;
+			width: 25%;
+			height: auto;
+			margin: 4.16%;
+			background-color: black;
+			border-radius: 25px;
+			transition: 0.6s ease;
+		}
+		.three:hover {
+			background-color: rgba(0,0,0,0.5);
+		}
+		.oneimg img {
+			float: left;
+			width: 45%;
+			margin: 5% 25%;
+			border-radius: 25px;
+		}
+		footer {
+			width: 100%;
+			margin: 0;
+			padding: 0;
+			overflow: hidden;
+		}
+		.footercontainer {
+			float: left;
+			width: 100%;
+			margin: 0;
+			padding-top: 2%;
+			background-color: black;
+		}
+		.footercontainer hr {
+			width: 80%;
+			position: absolute;
+			left: 10%;
+			opacity: 0.5;
+		}
+		.f-panel-one {
+			float: left;
+			width: 30%;
+			padding-left: 10%;
+			padding-top: 5%;
+			padding-bottom: 3%;
+			background-color: black;
+			color: white;
+		}
+		.f-panel-one img {
+			width: 30%;
+			height: auto;
+			margin-bottom: 2%;
+			margin-left: 4%;
+		}
+		.f-panel-one p {
+			color: rgba(255, 255, 255, 0.7);
+			font-size: 1vw;
+			line-height: 100%;
+			margin-bottom: 4%;
+		}
+		.f-panel-two h3 {
+			color: white;
+			margin-left: 5%;
+			text-shadow: 1px 2px grey;
+			font-size: 1vw;
+		}
+		.f-panel-two {
+			text-align: center;
+			float: left;
+			width: 50%;
+			padding-left: 10%;
+			padding-top: 5%;
+			padding-bottom: 3%;
+		}
+		.f-panel-two-one {
+			float: left;
+			width: 25%;
+		}
+		.f-panel-two-two {
+			float: left;
+			width: 25%;
+		}
+		.f-panel-two ul li {
+			margin: 10%;
+			display: block;
+		}
+		.f-links li a {
+			color: rgba(255, 255, 255, 0.5);
+			border: 1px solid transparent;
+			transition: 0.3s ease;
+			font-size: 1vw;
+		}
+		.f-links li a:hover {
+			color: tomato;
+			background-color: white;
+		}
+		@media screen and (max-width: 850px) {
+			.logo {
+				position: absolute;
+				top: 15%;
+				left: 50%;
+				transform: translate(-50%,-50%);
+			}
+			.one {
+				position: absolute;
+				top: 40%;
+				left: 46%;
+				transform: translate(-50%,-50%);
+			}
+			.one li {
+				display: block;
+				text-align: center;
+				margin: 20%;
+				width: 100%;
+			}
+			.title {
+			    position: absolute;
+			    top: 69%;
+			    left: 50%;
+			    transform: translate(-50%,-50%);
+		    }
+		    .title h1 {
+			    color: white;
+			    font-size: 20px;
+			    text-align: center;
+		    }
+		    .title h1.author {
+			    font-size: 13px; 
+			    text-align: center;
+			}
+			.button {
+				position: absolute;
+			    top: 90%;
+			    left: 49%;
+			    transform: translate(-50%,-50%);
+			}
+			.butt {
+				width: 80%;
+				float: left;
+				text-align: center;
+				margin-top: 2%;
+			}
+		}
+		@media screen and (max-width: 580px) {
+			.button {
+				position: absolute;
+			    top: 90%;
+			    left: 47.5%;
+			    transform: translate(-50%,-50%);
+			}
+		}
+		@media screen and (max-width: 500px) {
+			.button {
+				position: absolute;
+			    top: 90%;
+			    left: 46%;
+			    transform: translate(-50%,-50%);
+			}
+		}
+		@media screen and (max-width: 480px) {
+			header {
+				margin: 0;
+				padding: 0;
+				overflow-x: hidden;
+
+			}
+			.logo {
+				top: 25%;
+			}
+			.one {
+				margin: 0;
+				padding: 0;
+				display: none;
+			}
+			.title {
+			    position: absolute;
+			    top: 50%;
+			    left: 50%;
+			    transform: translate(-50%,-50%);
+		    }
+		    .title h1 {
+		    	font-size: 25px;
+		    }
+		    .button {
+		    	position: absolute;
+			    top: 85%;
+			    left: 46%;
+			    transform: translate(-50%,-50%);
+			}
+			.three {
+			    float: left;
+			width: 70%;
+			height: auto;
+			margin: 5% 15%;
+			background-color: black;
+			transition: 0.6s ease;
+		}
+		.oneimg img {
+			float: left;
+			width: 80%;
+			margin: 5% 10%;
+		}
+		.f-panel-one {
+			float: left;
+			width: 100%;
+		}
+		.f-panel-one img {
+			float: left;
+			margin-left: 25%;
+		}
+		.f-panel-one p {
+			float: left;
+			width: 80%;
+			text-align: center;
+			font-size: 2vw;
+		}
+		.f-panel-two h3 {
+			float: left;
+			margin-left: 25%;
+			font-size: 5vw;
+		}
+		.f-panel-two {
+			float: left;
+			width: 100%;
+		}
+		.f-panel-two-one {
+			float: left;
+			margin-top: 2%;
+			margin-bottom: 2%;
+			margin-left: 5%;
+		}
+		.f-panel-two-two {
+			float: left;
+			margin-top: 7%;
+			margin-bottom: 7%;
+			margin-left: 10%;
+		}
+		.f-links li a {
+			font-size: 3vw;
+
+		}
+		
+		#menuToggle {
+			display: block;
+		    position: relative;
+            top: 50px;
+            left: 50px;
+  
+            z-index: 1;
+  
+            -webkit-user-select: none;
+            user-select: none;
+        }
+        #menuToggle a {
+        	text-decoration: none;
+        	color: #232323;
+  
+            transition: color 0.3s ease;
+        }
+        #menuToggle a:hover {
+        	color: tomato;
+        }
+        #menuToggle input {
+        	display: block;
+        	width: 40px;
+        	height: 32px;
+        	position: absolute;
+        	top: -7px;
+        	left: -8px;
+        	cursor: pointer;
+        	opacity: 0;
+        	z-index: 2; 
+        	-webkit-touch-callout: none;
+        }
+        #menuToggle span {
+        	display: block;
+        	width: 33px;
+        	height: 4px;
+        	margin-bottom: 5px;
+        	position: relative;
+        	background: rgba(255, 255, 255, 0.9);
+        	border-radius: 3px;
+        	z-index: 1;
+        	transform-origin: 4px 0px;
+        	transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              opacity 0.55s ease;
+          }
+          #menuToggle span:first-child {
+          	transform-origin: 0% 0%;
+          }
+          #menuToggle span:nth-last-child(2) {
+          	transform-origin: 0% 100%;
+          }
+          #menuToggle input:checked ~ span {
+          	opacity: 1;
+          	transform: rotate(45deg) translate(-2px, -1px);
+          	background: #232323;
+          }
+          #menuToggle input:checked ~ span:nth-last-child(3) {
+          	opacity: 0;
+          	transform: rotate(0deg) scale(0.2, 0.2);
+          }
+          #menuToggle input:checked ~ span:nth-last-child(2) {
+          	transform: rotate(-45deg) translate(0, -1px);
+          }
+          #menu {
+          	position: absolute;
+            width: 100%;
+            margin: -25% 0% 0% -20%;
+            padding: 5%;
+            padding-top: 10%;
+            background: #ededed;
+            list-style-type: none;
+            -webkit-font-smoothing: antialiased;
+            transform-origin: 0% 0%;
+            transform: translate(-100%, 0);
+            transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+        }
+        #menu li {
+        	padding: 0 30%;
+        	text-align: center;
+            font-size: 25px;
+            margin: 90px 5px;
+            display: block;
+        }
+        #menuToggle input:checked ~ ul {
+        	transform: none;
+        }
+    }
+	</style>
+</head>
+<body>
+	<header>
+		<div class="myheader">
+			<div class="logo">
+				<img src="https://lh3.googleusercontent.com/NUAYPz-uSuX0IkmO8jhKfVNHp2ZQu6CWSoMl8DyK_gt3DSbRDBylCA0TTclHLTbB12aug_Krf-jN0pbUoXt30wZwUF9bQbespbQGaOQLbUlFaYryyMitEXzCfR63voXanvZm1pvwQA=w2400">
+			</div>
+			<nav role="navigation">
+  <div id="menuToggle">
+    
+    <input type="checkbox" />
+    
+    <span></span>
+    <span></span>
+    <span></span>
+    
+    <ul id="menu">
+      <a href="#"><li>HOME</li></a>
+      <a href="https://discord.gg/kgqZjfD8KG"><li>DISCORD</li></a>
+      <a href="results.html"><li>RESULTS</li></a>
+      <a href="ourteam.html"><li>OUR TEAM</li></a>
+    </ul>
+  </div>
+</nav>
+			<ul class="one">
+				<li><a href="#"> HOME </a></li>
+				<li><a href="https://discord.gg/kgqZjfD8KG"> DISCORD </a></li>
+				<li><a href="results.html"> RESULTS </a></li>
+				<li><a href="ourteam.html"> OUR TEAM </a></li>
+			</ul>
+		</div>
+		<div class="title">
+			<h1> Testing knowledge at the speed of thought </h1>
+			<br>
+			<h1 class="author"> Quiz Club IIT Patna </h1>
+		</div>
+		<div class="button">
+			<a href="https://dare2compete.com/p/parakh-indian-institute-of-technology-iit-patna-173609?lb=5DTZFqf" class="butt"> Register </a>
+			<a onclick="myFunction()" class="butt"> Participate </a>
+		</div>
+	</header>
+	<script>
+	function myFunction() {
+	  alert("Warning! The button you are trying to access is currently disabled.");
+	}
+	function myFunction2() {
+	  alert("Warning! No results to show as of yet.");
+	}
+	</script>
+
+
+	<div class="postbanner">
+		<span>Guidelines</span>
+	</div>
+
+	<div class="postrule">
+		<span>
+			-> Participation in quizzes is NOT limited to IIT Patna students only. People associated with any school, college or organisation can participate.<br><br>
+			-> The registration is completely free for all.<br><br>
+			-> After registration, participants are requested to join our Discord server, the link of which can be found on the navigation bar above.<br><br>
+			<strong>
+				NOTE : There are two types of Quizzes - OPEN (everyone is eligible to participate) and U-25 (Only people who are 25 or under the age of 25 are eligible to participate).<br>
+				Registration process is individual and any two registered participants can form a team.<br><br>
+			</strong>
+			In <strong>OPEN QUIZZES</strong> teams of two or solo participation is allowed. These quizzes have a Prelims and Finals structure. The prelims round will be a written round. The top 8 teams from this round will qualify for the finals. The rules and structure of the finals will be told to the finalists after the results of the prelims are out. <br><br>
+			<strong>U-25 QUIZZES</strong> are open only for the participants whose age is 25 years or under. Only solo participation is allowed. The quizzes have only one round which will be written.<br><br>
+			The quizzes will be live-streamed on Youtube and the participants will have to type in their answers in the Google Form.
+			Both the YouTube video and G-Form will be available under the <strong>Participate</strong> tab, which will get activated on the day of the quiz.
+		</span>
+	</div>
+
+
+	<div class="postbanner">
+		<span>SCHEDULE</span>
+	</div>
+
+	<div class="post">
+		<div class="postimg">
+			<img src="https://lh3.googleusercontent.com/bWpNaf9e9n-3MExvUpQhFbxs4GphpmK825Ftv84_DttWJ6GPi_rykcGqtIvJQBDaOc7Yvb5rbsOxLiiyTbpDOc0e4ENmE8HrkWNVvTOHq2FVJGdG2mZsQ_iMt0ucg7loJbRiVwmB3A=w2400">
+		</div>
+		<div class="postinfo">
+			<div class="posthead">
+				<span>Vividh Bharat</span>
+				<span style="font-size: 2vw;"><br>India Quiz(Open for all)<br><br>Teams of Two or Solo</span>
+			</div>
+			<h2 class="postdate">Prelims at 11 AM on 11th July</h2>
+			<p class="posttext">
+				
+			</p>
+		</div>
+	</div>
+
+	<div class="post">
+		<div class="postimg">
+			<img src="https://lh3.googleusercontent.com/juo0XHtKN6Ta-ckef9wkcEEWP-ThZahHr7c2wdlgxCvIJzc3zZ9mEbT5cnip5P0ObPA2FdbnD3Rgybubg4_kDqtyQa1FMNOZAfnhJbx01ij-VAIOzlr1d9n7DIQi2Xt_rklHr6b9HA=w2400">
+		</div>
+		<div class="postinfo">
+			<div class="posthead">
+				<span>not so<br>L.A.M.E. Quiz</span>
+				<span style="font-size: 2vw;"><br>MELA Quiz(Open for all)<br><br>Teams of Two or Solo</span>
+			</div>
+			<h2 class="postdate">Prelims at 11 AM on 17th July</h2>
+			<p class="posttext">
+
+			</p>
+		</div>
+	</div>
+
+	<div class="post">
+		<div class="postimg">
+			<img src="https://lh3.googleusercontent.com/eQ7FCtYdUxeB63nIYhziFMrO_oHvJi2VdL_slGCKyrnRa1246OYyTnwCmepqyYuna9udke5ncWvp7cYPHO5ivqUmulfdqVjhUW1dK70LjV7DubIXTTI9iNULmp5c6GgDDD7Y9UNc3g=w2400">
+		</div>
+		<div class="postinfo">
+			<div class="posthead">
+				<span>Trials by Trivia</span>
+				<span style="font-size: 2vw;"><br>General Quiz(Open for all)<br><br>Teams of Two or Solo</span>
+			</div>
+			<h2 class="postdate">Prelims at 11 AM on 18th July</h2>
+			<p class="posttext">
+				
+			</p>
+		</div>
+	</div>
+
+
+
+	<div class="post">
+		<div class="postimg">
+			<img src="https://lh3.googleusercontent.com/fSCHuZhgtOuXAUGeXPp63AVosVzG988L2gW4E5TrjYmiE3VoWjWxm0N-21pHXSF3YhVZq0ggGegfChsKtDoPts3qhLflZqCwYm1V5P_SjB0NBjWFUNuhZtxnvA50kxIZANy-gN4vOw=w2400">
+		</div>
+		<div class="postinfo">
+			<div class="posthead">
+				<span>Moneyball</span>
+				<span style="font-size: 2vw;"><br>Biz-Sports Quiz(U-25 Only)<br><br>Solo participation only</span>
+			</div>
+			<h2 class="postdate">6 PM on 10th July</h2>
+			<p class="posttext">
+				
+			</p>
+		</div>
+	</div>
+
+	<div class="post">
+		<div class="postimg">
+			<img src="https://lh3.googleusercontent.com/Oc8A75Alh_MtdswGL5vyEF3XZpMfviaj6DSf8bQWKu6chH6JAnuKf_m-OqH-sd3QPEIxtLdSxtat_PKfzzSo3Im9IRdswG-DVC5pJ5oDWLGCTfHKxzgmieSLSUbClttLeukF_NjBLw=w2400">
+		</div>
+		<div class="postinfo">
+			<div class="posthead">
+				<span>Coincidence? <br>I think not!</span>
+				<span style="font-size: 2vw;"><br>Myth, Mysteries & Conspiracies Quiz(U-25 Only)<br><br>Solo participation only</span>
+			</div>
+			<h2 class="postdate">3 PM on 11th July</h2>
+			<p class="posttext">
+				
+			</p>
+		</div>
+	</div>
+
+	<div class="post">
+		<div class="postimg">
+			<img src="https://lh3.googleusercontent.com/Sn8RZWVjOcuFAfnng8bcWJz4JjA0W2JKPAK2_zPEsGhIY7lWffnTuMq3NRQI2fWEOz9hCJ5RJeeIkUCuxOAe7heMzQDtKm94ZIjL7OPzxIGDxJ_MQAH6KolUeL-QsEfc84EX-4FsGw=w2400">
+		</div>
+		<div class="postinfo">
+			<div class="posthead">
+				<span>Once Upon a Time...</span>
+				<span style="font-size: 2vw;"><br>Quiz on Tales and Stories<br>from around the world(U-25 Only)<br><br>Solo participation only</span>
+			</div>
+			<h2 class="postdate">3 PM on 17th July</h2>
+			<p class="posttext">
+				
+			</p>
+		</div>
+	</div>
+
+	<div class="post">
+		<div class="postimg">
+			<img src="https://lh3.googleusercontent.com/yNvs0QOgW7FsWM12mVFgWtxgoEaMbtqLwqzWRb5q-tIv9ZhKhrjIOlXiUB2pviv2yFrxppPiY5gJm60ebP7wqkiAMLZI4WLDQxbimNm1Ztmw-a4kFR9E1W8R2JFwtP8mmQUIO9ki1w=w2400">
+		</div>
+		<div class="postinfo">
+			<div class="posthead">
+				<span>'Element'ary <br> my dear quizzers</span>
+				<span style="font-size: 2vw;"><br>Quiz on Chemical Elements(U-25 Only)<br><br>Solo participation only</span>
+			</div>
+			<h2 class="postdate">3 PM on 18th July</h2>
+			<p class="posttext">
+				
+			</p>
+		</div>
+	</div>
+
+	
+
+
+
+
+
+	<footer>
+		<div class="footercontainer">
+			<hr>
+			<div class="f-panel-one" align="center">
+				<img src="https://lh3.googleusercontent.com/toszyU0WBX7Ae2sx0wzE0CPkOz7fkE6EKabmi4IVgd_4aw9VfYjlzgx2WKqWZ4X1F776eWE2zmqdkZ8W__Mqkbwra2bx0URM0KJYmnDke0J2ZoSDhFWKvLdHXvB2lYfVZ4v3fTuD1g=w2400">
+				<p>Quiz Club of Indian Institute of Technology Patna</p>
+				
+			</div>
+			<div class="f-panel-two">
+				<div class="f-panel-two-one">
+				<ul class="f-links">
+					<li><a href="https://www.slideshare.net/QuizClubIITPatna">Slideshare</a></li>
+					<li><a href="https://discord.gg/kgqZjfD8KG">Discord</a></li>
+					<li><a href="https://www.instagram.com/qc_iitp/">Instagram</a></li>
+					<li><a href="https://www.facebook.com/QCIITP/">Facebook</a></li>
+				</ul>
+				</div>
+				<div class="f-panel-two-two">
+				<ul class="f-links">
+					<li><a href="mailto:quizclub@iitp.ac.in">Email</a></li>
+					<li><a href="https://forms.gle/WxpXpuCAfVtc3QoV8">Feedback</a></li>
+				</ul>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+</body>
+</html>
