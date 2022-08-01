@@ -1,0 +1,128 @@
+.postimg img{
+  width: 30vw;
+  height: auto;
+  transform: translateX(10px) translateY(-15px);
+  position: relative;
+  border-radius: 0.2rem;
+  box-shadow: 0 5rem 3rem rgba(0, 0, 0, 0.2);
+  transition: transform .2s;
+}
+
+.postimg img:hover{
+  transform: translateY(-25px) translateX(10px);
+}
+
+.postimg {
+  margin-right: 5%;
+}
+
+.post {
+  width: 80%;
+  margin: 10% 10% 5% 10%;
+  background-color: #fff;
+  box-shadow: 0 1.4rem 8rem rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  border-radius: 0.5rem;
+}
+
+.postbanner {
+  float: left;
+  width: 90%;
+  margin: 5% 5% 5% 5%;
+  background-color: #fff;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  display: flex;
+  background: #D1913C;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #FFD194, #D1913C);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #FFD194, #D1913C); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
+
+  align-content: center;
+  align-items: center;
+  border-radius: 0.5rem;
+  text-align: center;
+}
+
+.postrule {
+  float: left;
+  width: 85%;
+  margin: -3% 5% 5% 5%;
+  background-color: #fff;
+  padding: 2.5%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  display: flex;
+
+  align-content: center;
+  align-items: center;
+  border-radius: 0.5rem;
+  text-align: left;
+}
+
+.postrule span {
+  color: rgba(0, 0, 0, 0.8);
+  font-family: Trebuchet MS;
+  font-size: 1.25vw;
+}
+
+.postbanner span {
+  width: 100%;
+  display: block;
+  text-align: center;
+  font-family: Helvetica;
+  color: rgba(255, 255, 255, .9);
+  font-size: 3vw;
+  font-weight: bolder;
+  margin: 2%;
+}
+
+.postinfo {
+  width: 100%;
+  padding: 5%;
+}
+
+
+.postinfo span{
+  display: block;
+  color: rgba(0, 41, 47, 0.7);
+  font-size: 4vw;
+  font-weight: bolder;
+  margin: 2%;
+  
+}
+
+.posthead {
+  margin-top: -10%;
+  margin-bottom: 7%;
+}
+
+.postdate {
+  padding-bottom: 5%;
+  font-size: 2vw;
+  color: rgba(0, 0, 0, 0.5);
+  font-family: Trebuchet MS;
+}
+
+.posttext {
+  font-size: 1vw;
+}
+
+@media screen and (max-width: 850px) {
+  .postrule span {
+    font-size: 2vw;
+  }
+}
+
+
+@media screen and (max-width: 480px) {
+  .postbanner {
+    margin: 10% 5% 10% 5%;
+  }
+  .postbanner span {
+    font-size: 5vw;
+  }
+  .postrule span {
+    font-size: 2.5vw;
+  }
+}
